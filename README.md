@@ -1,5 +1,7 @@
 Municipal Debt
 
+[![Build Status](https://travis-ci.org/CT-Data-Collaborative/municipal-debt.svg?branch=master)](https://travis-ci.org/CT-Data-Collaborative/municipal-debt)
+
 Municipal Debt reports several indicators of Municipal Debt.
 
 ## License MIT

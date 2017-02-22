@@ -41,7 +41,7 @@
           "type": "string",
           "dimension": true, 
           "constraints": {
-					  "enum": [
+				    "enum": [
 					    "Number", 
 					    "Percent"
 					  ]
@@ -152,18 +152,18 @@
 			"type": "object"
     }
   },
-  "spot_tests": [
+  "spot_checks": [
     {
       "type": "$lookup",
       "filter": {
         "Town": "Andover",
         "Year": "SFY 2006-2007",
-        "Measure Type": "Percent", 
-        "Variable": "Ratio of Debt to Actual Grand List"
+        "Variable": "Ratio of Debt to Actual Grand List",
+        "Measure Type": "Percent" 
       },
       "expected": {
         "type": "$match",
-        "number type": "int",
+        "number type": "float",
         "value": 3.9
       }
     },
@@ -177,10 +177,24 @@
       },
       "expected": {
         "type": "$match",
-        "number type": "int",
+        "number type": "float",
         "value": 1.4
       }
-    },    
+    }, 
+    {
+      "type": "$lookup",
+      "filter": {
+        "Town": "Winchester",
+        "Year": "SFY 2010-2011",
+        "Measure Type": "Percent", 
+        "Variable": "Debt per Capita as Percent of State Average"
+      },
+      "expected": {
+        "type": "$match",
+        "number type": "float",
+        "value": 24.1
+      }
+    }, 
     {
       "type": "$lookup",
       "filter": {
@@ -208,27 +222,9 @@
         "number type": "int",
         "value": 25325000
       }
-    },     
-    {
-      "type": "$lookup",
-      "filter": {
-        "Town": "Winchester",
-        "Year": "SFY 2010-2011",
-        "Measure Type": "Percent", 
-        "Variable": "	Debt per Capita as Percent of State Average"
-      },
-      "expected": {
-        "type": "$match",
-        "number type": "int",
-        "value": 24.1
-      }
-    }      
+    }    
   ],
   "dimension_groups": [{
-		"Measure Type": [
-		  "Number", 
-			"Percent"
-		], 
 		"Variable": [
 		  "Bonded Regional School District Debt",
 			"Debt per Capita",                                         
