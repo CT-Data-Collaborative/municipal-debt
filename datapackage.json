@@ -21,55 +21,55 @@
   },
   "contributor": [],
   "resources": [{
-      "path": "data/municipal_debt.csv",
-      "format": "csv",
-      "schema": {
-        "fields": [{
-          "name": "Town",
-          "type": "string",
-          "dimension": false
-        }, {
-          "name": "FIPS",
-          "type": "string",
-          "dimension": false
-        }, {
-          "name": "Year",
-          "type": "string",
-          "dimension": false
-        }, {
-          "name": "Measure Type",
-          "type": "string",
-          "dimension": true, 
-          "constraints": {
-				    "enum": [
-					    "Number", 
-					    "Percent"
-					  ]
-				  }
-        }, {
-          "name": "Variable",
-          "type": "string",
-          "dimension": true, 
-          "constraints": {
-					  "enum": [
-					    "Bonded Regional School District Debt",
-					    "Debt per Capita",                                         
-              "Debt Service",                                            
-              "Long Term Bonded Debt",
-              "Total Indebtedness",
-              "Debt as Percent of Revenue",                               
-              "Debt per Capita as Percent of State Average",              
-              "Ratio of Debt to Actual Grand List",                        
-              "Ratio of Debt to Equalized Net Grand List",                         
-              "Total Indebtedness as Percent of Total Expenditures"
-            ]
-				  }
-        }, {
-          "name": "Value",
-          "type": "number",
-          "dimension": false
-        }]
-      }
+    "path": "data/municipal_debt.csv",
+    "format": "csv",
+    "schema": {
+      "fields": [{
+        "name": "Town",
+        "type": "string",
+        "dimension": false
+      }, {
+        "name": "FIPS",
+        "type": "string",
+        "dimension": false
+      }, {
+        "name": "Year",
+        "type": "string",
+        "dimension": false
+      }, {
+        "name": "Measure Type",
+        "type": "string",
+        "dimension": true, 
+        "constraints": {
+			    "enum": [
+				    "Number", 
+				    "Percent"
+				  ]
+			  }
+      }, {
+        "name": "Variable",
+        "type": "string",
+        "dimension": true, 
+        "constraints": {
+				  "enum": [
+				    "Bonded Regional School District Debt",
+				    "Debt per Capita",                                         
+            "Debt Service",                                            
+            "Long Term Bonded Debt",
+            "Total Indebtedness",
+            "Debt as Percent of Revenue",                               
+            "Debt per Capita as Percent of State Average",              
+            "Ratio of Debt to Actual Grand List",                        
+            "Ratio of Debt to Equalized Net Grand List",                         
+            "Total Indebtedness as Percent of Total Expenditures"
+          ]
+			  }
+      }, {
+        "name": "Value",
+        "type": "number",
+        "dimension": false
+      }]
+    }
     }],
     "last_modified": "02/15/2017",
     "ckan_extras": {
@@ -77,165 +77,182 @@
         "ckan_name": "Full Description",
         "value": "Presented in this dataset are several indicators related to the Indebtedness of a given municipality for a given year. Total Indebtedness is the sum of any long-term bonded debt obligations for that municipality and any obligations the municipality owes for the bonded debt of one or more related Regional School Districts. Debt Service refers to the total sum of capital required to pay any principal and interest for a given timespan - in this case the given State Fiscal Year. State Fiscal Years run from July 1 through the following June 30. Population estimates used to calculate Per Capita measures were derived using the Connecticut Department of Public Health estimates as of July 1 of the year ending the State Fiscal Year - ie. SFY 2012-2013 uses the population estimate for July 1, 2013. Grand List values used to derive related indicators are from October of the year preceding the State Fiscal Year - ie SFY 2012-2013 uses Grand List data from October 2011. Town's without data for the Bonded Regional School District Debt indicator do not have a connection with a Regional School District, and therefore no related debt obligations.",
         "type": "string"
-    },
-    "suppression": {
-      "ckan_name": "Suppression",
-      "value": "",
-      "type": "string"
-    },
-    "technical_notes": {
-      "ckan_name": "Technical Notes",
-      "value": "None",
-      "type": "string"
-    },
-    "domain": {
-      "ckan_name": "Domain",
-      "value": "Civic Vitality",
-      "type": "string"
-    },
-    "subdomain": {
-      "ckan_name": "Subdomain",
-      "value": "Public Finance",
-      "type": "string"
-    },
-    "geography": {
-      "ckan_name": "Geography",
-      "value": "Town",
-      "type": "string",
-      "constraints": {
-        "enum": ["Town", "County", "Town/County", "District", "Other"]
-      }
-    },
-    "frequency": {
-      "ckan_name": "Frequency",
-      "value": "Annual",
-      "type": "string"
-    },
-    "years_in_catalog": {
-      "ckan_name": "Years in Catalog",
-      "value": ["SFY 2000-2001", "SFY 2001-2002", "SFY 2002-2003", "SFY 2003-2004", "SFY 2004-2005", "SFY 2005-2006", "SFY 2006-2007", "SFY 2007-2008", "SFY 2008-2009", "SFY 2009-2010", "SFY 2010-2011", "SFY 2011-2012", "SFY 2012-2013", "SFY 2013-2014", "SFY 2014-2015"],
-      "type": "array"
-    },
-    "latest_year": {
-      "ckan_name": "Latest Year Available",
-      "value": "SFY 2014-2015",
-      "type": "string"
-    },
-    "disabled_views": {
-      "ckan_name": "Disabled Views",
-      "value": [],
-      "type": "array",
-      "constraings": {
-        "enum": ["map", "table", "bar", "line"]
-      }
-    },
-    "units": {
-      "ckan_name": "Units",
-      "value": {
-        "Number": "",
-        "Percent": "%"
-      }
-    },
-    "expected_number_of_geographies": {
-			"ckan_name": "Expected Number of Unique Geographies",
-			"value": 169,
-			"type": "string"
-		},
-    "default": {
-      "ckan_name": "Default",
-			"value": {
-				"Measure Type": "Number",
-				"Town": "Andover",
-				"Year": ["SFY 2000-2001"],
-				"Variable": "Bonded Regional School District Debt"
-			},
-			"type": "object"
-    }
-  },
-  "spot_checks": [
-    {
-      "type": "$lookup",
-      "filter": {
-        "Town": "Andover",
-        "Year": "SFY 2006-2007",
-        "Variable": "Ratio of Debt to Actual Grand List",
-        "Measure Type": "Percent" 
       },
-      "expected": {
-        "type": "$match",
-        "number type": "float",
-        "value": 3.9
-      }
+      "suppression": {
+        "ckan_name": "Suppression",
+        "value": "",
+        "type": "string"
+      },
+      "technical_notes": {
+        "ckan_name": "Technical Notes",
+        "value": "None",
+        "type": "string"
+      },
+        "numerator": {
+          "ckan_name": "Numerator",
+          "value": "For Debt per Capita, Debt as Percent of Revenue, Ratio of Debt to Actual Grand List, and Ratio of Debt to Equalized Net Grand List, the numerator is the Total Indebtedness for the selected municipality and year. For Debt per Capita as Percent of State Average, the numerator is Debt per Capita for the selected municipality and year.",
+        "type": "string"
+      },   
+      "denominator": {
+        "ckan_name": "Denominator",
+        "value": "For Debt per Capita, the total Population of the selected municipality and year. For Debt as Percent of Revenue, the denominator is the Total Revenue for the selected municipality and year. For Total Indebtedness as Percent of Total Expenditures, the denominator is the Total Expenditures for the selected municipality and year. For Ratio of Debt to Actual Grand List, the denominator is the net Actual Grand List value for the selected municipality as of October of the year preceding the selected State Fiscal Year. For Ratio of Debt to Equalized Grand List, the denominator is the Equalized Net Grand List value for the selected municipality as of October of the year preceding the selected State Fiscal Year. For Debt per Capita as Percent of State Average, the denominator is the quotient of the sum of Total Indebtedness for all municipalities divided by the sum of their corresponding Total Population for the selected year.",
+        "type": "string"
+      },
+      "domain": {
+        "ckan_name": "Domain",
+        "value": "Civic Vitality",
+        "type": "string"
+      },
+      "subdomain": {
+        "ckan_name": "Subdomain",
+        "value": "Public Finance",
+        "type": "string"
+      },
+      "geography": {
+        "ckan_name": "Geography",
+        "value": "Town",
+        "type": "string",
+        "constraints": {
+          "enum": ["Town", "County", "Town/County", "District", "Other"]
+        }
+      },
+      "frequency": {
+        "ckan_name": "Frequency",
+        "value": "Annual",
+        "type": "string"
+      },
+      "years_in_catalog": {
+        "ckan_name": "Years in Catalog",
+        "value": ["SFY 2000-2001", "SFY 2001-2002", "SFY 2002-2003", "SFY 2003-2004", "SFY 2004-2005", "SFY 2005-2006", "SFY 2006-2007", "SFY 2007-2008", "SFY 2008-2009", "SFY 2009-2010", "SFY 2010-2011", "SFY 2011-2012", "SFY 2012-2013", "SFY 2013-2014", "SFY 2014-2015"],
+        "type": "array"
+      },
+      "latest_year": {
+        "ckan_name": "Latest Year Available",
+        "value": "SFY 2014-2015",
+        "type": "string"
+      },
+      "disabled_views": {
+        "ckan_name": "Disabled Views",
+        "value": [],
+        "type": "array",
+        "constraings": {
+          "enum": ["map", "table", "bar", "line"]
+        }
+      },
+      "units": {
+        "ckan_name": "Units",
+        "value": {
+          "Number": "",
+          "Percent": "%"
+        }
+      },
+      "expected_number_of_geographies": {
+		  	"ckan_name": "Expected Number of Unique Geographies",
+		  	"value": 169,
+		  	"type": "string"
+		  },
+      "default": {
+        "ckan_name": "Default",
+		  	"value": {
+		  		"Measure Type": "Number",
+		  		"Town": "Andover",
+		  		"Year": ["SFY 2000-2001"],
+		  		"Variable": "Bonded Regional School District Debt"
+		  	},
+		  	"type": "object"
+      }, 
+      "socrata": {
+        "ckan_name": "Socrata",
+        "value": "True",
+        "type": "string"
+      }    
     },
-    {
-      "type": "$lookup",
-      "filter": {
-        "Town": "Newington",
-        "Year": "SFY 2003-2004",
-        "Measure Type": "Percent", 
-        "Variable": "Ratio of Debt to Actual Grand List"
+    "spot_checks": [
+      {
+        "type": "$lookup",
+        "filter": {
+          "Town": "Andover",
+          "Year": "SFY 2006-2007",
+          "Variable": "Ratio of Debt to Actual Grand List",
+          "Measure Type": "Percent" 
+        },
+        "expected": {
+          "type": "$match",
+          "number type": "float",
+          "value": 3.9
+        }
       },
-      "expected": {
-        "type": "$match",
-        "number type": "float",
-        "value": 1.4
-      }
-    }, 
-    {
-      "type": "$lookup",
-      "filter": {
-        "Town": "Winchester",
-        "Year": "SFY 2010-2011",
-        "Measure Type": "Percent", 
-        "Variable": "Debt per Capita as Percent of State Average"
-      },
-      "expected": {
-        "type": "$match",
-        "number type": "float",
-        "value": 24.1
-      }
-    }, 
-    {
-      "type": "$lookup",
-      "filter": {
-        "Town": "Ledyard",
-        "Year": "SFY 2006-2007",
-        "Measure Type": "Number", 
-        "Variable": "Debt per Capita"
-      },
-      "expected": {
-        "type": "$match",
-        "number type": "int",
-        "value": 589
-      }
-    },    
-    {
-      "type": "$lookup",
-      "filter": {
-        "Town": "Plymouth",
-        "Year": "SFY 2013-2014",
-        "Measure Type": "Number", 
-        "Variable": "Total Indebtedness"
-      },
-      "expected": {
-        "type": "$match",
-        "number type": "int",
-        "value": 25325000
-      }
-    }    
-  ],
-  "dimension_groups": [{
-		"Variable": [
-		  "Bonded Regional School District Debt",
-			"Debt per Capita",                                         
-      "Debt Service",                                            
-      "Long Term Bonded Debt",
-      "Total Indebtedness",
-      "Debt as Percent of Revenue",                               
-      "Debt per Capita as Percent of State Average",              
-      "Ratio of Debt to Actual Grand List",                        
-      "Ratio of Debt to Equalized Net Grand List",                         
-      "Total Indebtedness as Percent of Total Expenditures"
-		]
-	}]
+      {
+        "type": "$lookup",
+        "filter": {
+          "Town": "Newington",
+          "Year": "SFY 2003-2004",
+          "Measure Type": "Percent", 
+          "Variable": "Ratio of Debt to Actual Grand List"
+        },
+        "expected": {
+          "type": "$match",
+          "number type": "float",
+          "value": 1.4
+        }
+      }, 
+      {
+        "type": "$lookup",
+        "filter": {
+          "Town": "Winchester",
+          "Year": "SFY 2010-2011",
+          "Measure Type": "Percent", 
+          "Variable": "Debt per Capita as Percent of State Average"
+        },
+        "expected": {
+          "type": "$match",
+          "number type": "float",
+          "value": 24.1
+        }
+      }, 
+      {
+        "type": "$lookup",
+        "filter": {
+          "Town": "Ledyard",
+          "Year": "SFY 2006-2007",
+          "Measure Type": "Number", 
+          "Variable": "Debt per Capita"
+        },
+        "expected": {
+          "type": "$match",
+          "number type": "int",
+          "value": 589
+        }
+      },    
+      {
+        "type": "$lookup",
+        "filter": {
+          "Town": "Plymouth",
+          "Year": "SFY 2013-2014",
+          "Measure Type": "Number", 
+          "Variable": "Total Indebtedness"
+        },
+        "expected": {
+          "type": "$match",
+          "number type": "int",
+          "value": 25325000
+        }
+      }    
+    ],
+    "dimension_groups": [
+      {
+	  	  "Variable": [
+	  	    "Bonded Regional School District Debt",
+	  		  "Debt per Capita",                                         
+          "Debt Service",                                            
+          "Long Term Bonded Debt",
+          "Total Indebtedness",
+          "Debt as Percent of Revenue",                               
+          "Debt per Capita as Percent of State Average",              
+          "Ratio of Debt to Actual Grand List",                        
+          "Ratio of Debt to Equalized Net Grand List",                         
+          "Total Indebtedness as Percent of Total Expenditures"
+	  	  ]
+	    }
+	 ]
 }
