@@ -1,5 +1,6 @@
 library(dplyr)
-library(RCurl)
+library(devtools)
+library(datapkg)
 
 ##################################################################
 #
@@ -201,9 +202,10 @@ combined_final_long$"Measure Type"[which(combined_final_long$Variable %in% c("De
                                                "Ratio of Debt to Equalized Net Grand List",                         
                                                "Total Indebtedness as Percent of Total Expenditures"))] <- "Percent"
 
-#add FIPS (using raw URL from GitHub)
-common <- ("https://raw.githubusercontent.com/CT-Data-Collaborative/ctdata-catalog/master/Common")
-fips <- read.csv(file.path(common, "Geography", "town_fips.csv?token=AIOGobc7jL5CPapMO4OqpDM8eBDAmARgks5YteSTwA%3D%3D"))
+#add FIPS
+town_fips_dp_URL <- 'https://raw.githubusercontent.com/CT-Data-Collaborative/ct-town-list/master/datapackage.json'
+town_fips_dp <- datapkg_read(path = town_fips_dp_URL)
+fips <- (town_fips_dp$data[[1]])
 
 merge_long_fips <- merge(combined_final_long, fips, all=T)
 
