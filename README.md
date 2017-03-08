@@ -4,6 +4,8 @@ Municipal Debt
 
 Municipal Debt reports several indicators of Municipal Debt.
 
+Data Source: <https://data.ct.gov/Government/Municipal-Fiscal-Indicators-2011-2015-MS-Access-da/uij9-wzqw>
+
 ## License MIT
 
 ## Getting Setup
