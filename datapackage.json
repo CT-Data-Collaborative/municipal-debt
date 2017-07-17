@@ -156,9 +156,9 @@
         "ckan_name": "Default",
 		  	"value": {
 		  		"Measure Type": "Number",
-		  		"Town": "Andover",
-		  		"Year": ["SFY 2000-2001"],
-		  		"Variable": "Bonded Regional School District Debt"
+		  		"Town": "Hartford",
+		  		"Year": ["SFY 2014-2015"],
+		  		"Variable": "Debt Service"
 		  	},
 		  	"type": "object"
       }, 
