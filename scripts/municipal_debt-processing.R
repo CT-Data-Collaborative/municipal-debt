@@ -10,6 +10,8 @@ library(stringr)
 # On 02/15/2017
 # Update 07/17/2017 Jenna Daly
 #  - Remove Plymouth pop from state totals in 2014
+# Update 01/17/2018 Jenna Daly
+#  - Removed code that corrects for Plymouth in 14-15, no longer needed
 ##################################################################
 
 sub_folders <- list.files()
@@ -129,7 +131,7 @@ plymouth2014pop <- all_data$Population[which(all_data$Year == "SFY 2014-2015" & 
 state2014pop <- sum_pop$Population[which(sum_pop$Year == "SFY 2014-2015")]
 
 #Remove Plymouth pop for 2014 (11813) from total state population for 2014
-sum_pop$Population[which(sum_pop$Year == "SFY 2014-2015")] <- (state2014pop - plymouth2014pop)
+#sum_pop$Population[which(sum_pop$Year == "SFY 2014-2015")] <- (state2014pop - plymouth2014pop) <- no longer needed (01/17/2018)
 
 joined_sums <- merge(all_data, sum_indebt, by="Year")
 joined_sums <- merge(joined_sums, sum_pop, by="Year")

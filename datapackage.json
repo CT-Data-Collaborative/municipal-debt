@@ -72,11 +72,11 @@
       }]
     }
     }],
-    "last_modified": "07/17/2017",
+    "last_modified": "01/17/2018",
     "ckan_extras": {
       "full_description": {
         "ckan_name": "Full Description",
-        "value": "Presented in this dataset are several indicators related to the Indebtedness of a given municipality for a given year. Total Indebtedness is the sum of any long-term bonded debt obligations for that municipality and any obligations the municipality owes for the bonded debt of one or more related Regional School Districts. Debt Service refers to the total sum of capital required to pay any principal and interest for a given timespan - in this case the given State Fiscal Year. State Fiscal Years run from July 1 through the following June 30. Population estimates used to calculate Per Capita measures were derived using the Connecticut Department of Public Health estimates as of July 1 of the year ending the State Fiscal Year - ie. SFY 2012-2013 uses the population estimate for July 1, 2013. Grand List values used to derive related indicators are from October of the year preceding the State Fiscal Year - ie SFY 2012-2013 uses Grand List data from October 2011. Town's without data for the Bonded Regional School District Debt indicator do not have a connection with a Regional School District, and therefore no related debt obligations. For SFY 2014-2015, the town of Plymouth did not report to the OPM, therefore all values for that town and year are suppressed and calculations for percent of state averages account for the removal of the population of Plymouth.",
+        "value": "Presented in this dataset are several indicators related to the Indebtedness of a given municipality for a given year. Total Indebtedness is the sum of any long-term bonded debt obligations for that municipality and any obligations the municipality owes for the bonded debt of one or more related Regional School Districts. Debt Service refers to the total sum of capital required to pay any principal and interest for a given timespan - in this case the given State Fiscal Year. State Fiscal Years run from July 1 through the following June 30. Population estimates used to calculate Per Capita measures were derived using the Connecticut Department of Public Health estimates as of July 1 of the year ending the State Fiscal Year - ie. SFY 2012-2013 uses the population estimate for July 1, 2013. Grand List values used to derive related indicators are from October of the year preceding the State Fiscal Year - ie SFY 2012-2013 uses Grand List data from October 2011. Town's without data for the Bonded Regional School District Debt indicator do not have a connection with a Regional School District, and therefore no related debt obligations.",
         "type": "string"
       },
       "suppression": {
@@ -96,7 +96,22 @@
       },   
       "denominator": {
         "ckan_name": "Denominator",
-        "value": "For Debt per Capita, the total Population of the selected municipality and year. For Debt as Percent of Revenue, the denominator is the Total Revenue for the selected municipality and year. For Total Indebtedness as Percent of Total Expenditures, the denominator is the Total Expenditures for the selected municipality and year. For Ratio of Debt to Actual Grand List, the denominator is the net Actual Grand List value for the selected municipality as of October of the year preceding the selected State Fiscal Year. For Ratio of Debt to Equalized Grand List, the denominator is the Equalized Net Grand List value for the selected municipality as of October of the year preceding the selected State Fiscal Year. For Debt per Capita as Percent of State Average, the denominator is the quotient of the sum of Total Indebtedness for all municipalities divided by the sum of their corresponding Total Population (excluding Plymouth for SFY 2014-2015) for the selected fiscal year.",
+        "value": "For Debt per Capita, the total Population of the selected municipality and year. For Debt as Percent of Revenue, the denominator is the Total Revenue for the selected municipality and year. For Total Indebtedness as Percent of Total Expenditures, the denominator is the Total Expenditures for the selected municipality and year. For Ratio of Debt to Actual Grand List, the denominator is the net Actual Grand List value for the selected municipality as of October of the year preceding the selected State Fiscal Year. For Ratio of Debt to Equalized Grand List, the denominator is the Equalized Net Grand List value for the selected municipality as of October of the year preceding the selected State Fiscal Year. For Debt per Capita as Percent of State Average, the denominator is the quotient of the sum of Total Indebtedness for all municipalities divided by the sum of their corresponding Total Population for the selected fiscal year.",
+        "type": "string"
+      },
+      "socrata": {
+        "ckan_name": "Socrata",
+        "value": "True",
+        "type": "string"
+      }, 
+      "socrata_url": {
+        "ckan_name": "Socrata Dataset URL",
+        "value": "https://data.ct.gov/Health-and-Human-Services/CT-DCF-Abuse-Neglect-Reports-and-Allegations-by-To/337d-73fs",
+        "type": "string"
+      },
+      "socrata_dataset_name": {
+        "ckan_name": "Socrata Dataset Name",
+        "value": "CT DCF Abuse/Neglect Reports and Allegations by Town and State Fiscal Year",
         "type": "string"
       },
       "domain": {
@@ -124,12 +139,12 @@
       },
       "years_in_catalog": {
         "ckan_name": "Years in Catalog",
-        "value": ["SFY 2000-2001", "SFY 2001-2002", "SFY 2002-2003", "SFY 2003-2004", "SFY 2004-2005", "SFY 2005-2006", "SFY 2006-2007", "SFY 2007-2008", "SFY 2008-2009", "SFY 2009-2010", "SFY 2010-2011", "SFY 2011-2012", "SFY 2012-2013", "SFY 2013-2014", "SFY 2014-2015"],
+        "value": ["SFY 2000-2001", "SFY 2001-2002", "SFY 2002-2003", "SFY 2003-2004", "SFY 2004-2005", "SFY 2005-2006", "SFY 2006-2007", "SFY 2007-2008", "SFY 2008-2009", "SFY 2009-2010", "SFY 2010-2011", "SFY 2011-2012", "SFY 2012-2013", "SFY 2013-2014", "SFY 2014-2015", "SFY 2015-2016"],
         "type": "array"
       },
       "latest_year": {
         "ckan_name": "Latest Year Available",
-        "value": "SFY 2014-2015",
+        "value": "SFY 2015-2016",
         "type": "string"
       },
       "disabled_views": {
@@ -155,18 +170,12 @@
       "default": {
         "ckan_name": "Default",
 		  	"value": {
-		  		"Measure Type": "Number",
 		  		"Town": "Hartford",
-		  		"Year": ["SFY 2014-2015"],
+		  		"Year": ["SFY 2015-2016"],
 		  		"Variable": "Debt Service"
 		  	},
 		  	"type": "object"
-      }, 
-      "socrata": {
-        "ckan_name": "Socrata",
-        "value": "True",
-        "type": "string"
-      }    
+      } 
     },
     "spot_checks": [
       {
@@ -238,7 +247,21 @@
           "number type": "float",
           "value": 85.6
         }
-      }    
+      }, 
+      {
+        "type": "$lookup",
+        "filter": {
+          "Town": "Groton",
+          "Year": "SFY 2015-2016",
+          "Measure Type": "Percent", 
+          "Variable": "Ratio of Debt to Equalized Net Grand List"
+        },
+        "expected": {
+          "type": "$match",
+          "number type": "float",
+          "value": 0.9
+        }
+      }
     ],
     "dimension_groups": [
       {
