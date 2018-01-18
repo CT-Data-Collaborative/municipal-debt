@@ -106,12 +106,12 @@
       }, 
       "socrata_url": {
         "ckan_name": "Socrata Dataset URL",
-        "value": "https://data.ct.gov/Health-and-Human-Services/CT-DCF-Abuse-Neglect-Reports-and-Allegations-by-To/337d-73fs",
+        "value": "https://data.ct.gov/Government/Municipal-Fiscal-Indicators-2012-2016-MS-Access-Da/x5e2-4aw5",
         "type": "string"
       },
       "socrata_dataset_name": {
         "ckan_name": "Socrata Dataset Name",
-        "value": "CT DCF Abuse/Neglect Reports and Allegations by Town and State Fiscal Year",
+        "value": "Municipal Fiscal Indicators (2012-2016) MS Access Database",
         "type": "string"
       },
       "domain": {
